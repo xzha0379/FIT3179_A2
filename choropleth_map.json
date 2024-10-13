@@ -79,8 +79,8 @@
                     "title": "Fossil fuel per capita (kWh)",
                     "scale": {
                         "type": "threshold",
-                        "scheme": "greenblue",
-                        "domain": [2000, 4000, 6000, 8000]
+                        "scheme": "greens",
+                        "domain": [1500, 3000, 4500, 6000, 7500, 9000]
                     },
                     "legend":{
                         "orient": "right",
