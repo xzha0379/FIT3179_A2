@@ -1,0 +1,200 @@
+/* background styling */
+
+body {
+    background-color: #f8f8f8;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* styling title section */
+
+.title-section {
+    background-color: #829F82;
+    padding: 60px 20px;
+}
+
+.title-content {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.title-section h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.title-section h2 {
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Text styling (main section) */
+
+h1 {
+    color: #829F82;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    color: #829F82;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 550;
+    text-align: left;
+    margin: 50px auto;
+    width: 70%;
+}
+
+
+p {
+    color: #454545;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300px;
+    text-align: left;
+    margin: 20px auto;
+    width: 65%;
+}
+
+.styled-line {
+    border: 0;
+    height: 2px;
+    background-color: gray;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.caption {
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    width: 55%
+}
+
+/* chart alignments */
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#stacked-bar-chart, #stacked-area-chart {
+    height: 300px;
+    display: block;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    margin: 0 auto;
+    float: none;
+}
+
+#bubble-chart {
+    height: 360px;
+    display: block;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    margin: 0 auto;
+    float: none;
+}
+
+#choropleth_map {
+    width: 55%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+
+/* Summary Statistics Section */
+.statistics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .stat-box {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .stat-change {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .stat-change.up {
+    color: green;
+  }
+  
+  .stat-change.down {
+    color: red;
+  }
+
+/* formatting the references and data sources section */
+.references p, .data-sources p {
+    margin-bottom: 20px;
+    line-height: 1.6; 
+    color: #454545;       
+    font-size: 16px; 
+}
+
+/* format links */
+/* Style for all links on the page */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkblue;
+}
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- choropleth map -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+    <script src="choropleth_map.js"></script>
+
+    <!-- style and title -->
+    <title> FIT3179 Data Visualisation II </title>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+    <!-- Title Section -->
+    <div class="title-section">
+      <div class="title-content">
+        <h1>Australia's Role in Global Fossil Fuel Polution & Climate Change </h1>
+        <h2>
+          This article aims explores domestic fossil fuel consumption and exports along with their
+          overall effects on climate change and CO₂ emissions and Australia's ultimate role in the pollution
+          caused by fossil fuel usage to global warming.
+        </h2>
+      </div>
+    </div>
+
+    <!-- intro section -->
+    <h2> Introduction </h2>
+      <p> 
+        Australia plays a major role globally in the fossil fuels market as the world's <b>3rd largest exporter</b>, making up <b>7% of 
+        global fossil fuel exports.</b> Australia is the <b>5th largest miner </b>of fossil fuel carbon, and sits at <b>ten times the world average per capita.</b> 
+        Additionally, the country's over-reliance on fossil fuels for energy means its domestice greenhouse gas emissions are 
+        at <b>14th globally and in the top 10 per capita</b> (Swann, 2019). Whilst on paper Australia may make up only a small proportion of global
+        emissions, its role in supplying fossil fuels globally and high per capita usage make its overall contribution to global warming and
+        climate change a serious concern.
+      </p>
+    
+    <!-- Summary Statistics Section -->
+    <h2>Coal & LNG Summary Statistics</h2>
+    <p>
+      Autralia's greatest fossil fuel production and exports are black coal and natural gas. From 2022-2023, coal made up a total of
+      <b>$113.8b</b> aud in export income whilst gas made up a further <b>$90.3b</b> (AECR, 2024).
+    </p>
+    <section class="statistics-container">
+      <div class="stat-box">
+        <div class="stat-title">Coal Production</div>
+        <div class="stat-value">11,216 PJ <span class="stat-change down">(-1%)</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Production World Ranking</div>
+        <div class="stat-value">No.5 <span class="stat-change up">(+6%)</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Export World Ranking</div>
+        <div class="stat-value">No.2 <span class="stat-change up">(+26%)</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Gas Production</div>
+        <div class="stat-value">6,362 PJ <span class="stat-change up">(+3.4%)</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Production World Ranking</div>
+        <div class="stat-value">No.7 <span class="stat-change up">(+3.5%)</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-title">Export World Ranking</div>
+        <div class="stat-value">No.2 <span class="stat-change up">(+22.7%)</span></div>
+      </div>
+    </section>
+    <p class="caption">Fig. 1: Summary Statistics (AECR, 2024)</p>
+
+    <!-- Stacked area chart section -->
+    <h2>Yearly Domestic Fossil Fuel Production & Exports </h2>
+    <div class="chart-container">
+      <div id="stacked-area-chart"></div>
+    </div>
+    <p class="caption">Fig. 2: Australia's fossil fuel exports by year</p>
+    <p> 
+      This stacked area chart gives a breakdown on the total production (in petajoules) for the top 3 fossil fuels, 
+      black coal, crude oil and ORF along with natural gas between the years 2008-2021. The production amount follows a
+      generally increasing trend. These fossil fuels are then exported globally and turned into greenhouse gases including CO₂ emissions 
+      which heavily contribute to global warming through combustion to create energy. 
+    </p>
+    
+    <!-- stacked bar section -->
+    <h2>Top Coal Usage Countries for Electricity Generation per capita</h2>
+    <div class="chart-container">
+      <div id="stacked-bar-chart"></div>
+    </div>
+      <p class="caption">Fig. 3: Per Capita electricity generation from fuel types by country (Ritchie et. al, 2024)</p>
+     <p> 
+      In addition to coal being a major export, it also makes up a significant portion of domestic energy generation along with
+      natural gas. Globally, Australia is ranked in <b>2nd place for electricity generation per capita using coal</b> as shown in the stacked
+      bar graph which features the top 10 coal users globally per capita, while gas contributes another significant proportion to domestic
+      energy generation.
+     </p>
+    
+    <!-- line bar section -->
+    <h2> Top Countries in CO₂ emissions per capita (2022-2023)</h2>
+    <div class="chart-container">
+      <div id="bubble-chart"></div>
+    </div>
+    <p class="caption">Fig. 4: Top 15 countries CO₂ emissions per capita (Ritchie et. al, 2024)</p>
+    <p>
+      Due to a high reliance on fossil fuels for electricity generation, Australia comes in at <b>no. 10</b> amongst the top 15 countries with
+      the <b>highest CO₂ emissions per capita</b>, higher than both Canada and the US. 
+    </p>
+
+    <!-- choropleth map section -->
+    <h2> Fossil Fuels Electricity Generation per Capita</h2>
+    <section class="section map-section">
+      <div class="map-container">
+        <div id="choropleth_map"></div>
+        <p class="caption">Fig. 5: Electricity Generation from Fossil Fuels Per Capita (Ritchie et. al, 2024)</p>
+      </div>
+      <p>
+        The choropleth map allows Australia's fossil fuel usage per capita to be compared against other countries on a global basis.
+        Australia's per capita generation is similar to that of the US, whilst being almost double to that of a 1st world country with comparable
+        population and resources like Canada.
+      </p>
+    </section>
+
+    <!-- Conclusion -->
+     <h2>Key Takeaway</h2>
+     <p>
+      Australia's fossil fuel exports are composed mainly of black coal and liquified natural gas (LNG) which contribute significantly
+      to the economy (AECR, 2024). As the world shifts towards more sustainable energy sources to combat climate change, it is important to
+      evaluate Australia's position as both a major exporter and contributor to greenhouse gas emissions in its quest for economic growth and 
+      question its environmental responsibilities.
+     </p>
+
+    <!-- Reference Section -->
+    <hr class="styled-line">
+    <h2> Text References </h2>
+    <div class="references">
+      <p> 
+        Department of Climate Change, Energy, The Environment and Water. (2023, November 30). Energy Consumption. Energy.gov.au. 
+        <a href="https://www.energy.gov.au/energy-data/australian-energy-statistics/energy-consumption" target="_blank">
+          https://www.energy.gov.au/energy-data/australian-energy-statistics/energy-consumption</a>
+      </p>
+      <p>
+        Geoscience Australia. (2024, July 15). Coal. Geoscience Australia. <a href="https://www.ga.gov.au/aecr2024/coal" target="_blank">https://www.ga.gov.au/aecr2024/coal</a> 
+      </p>
+      <p>
+        Swann, T. (2019). New Analysis: Australia Ranks Third for Fossil Fuel Export. The Australia Institute. 
+        <a href="https://australiainstitute.org.au/post/new-analysis-australia-ranks-third-for-fossil-fuel-export/" target="_blank">
+          https://australiainstitute.org.au/post/new-analysis-australia-ranks-third-for-fossil-fuel-export/
+        </a>
+      </p>
+    </div>
+
+    <!-- Data Sources -->
+    <h2> Data Sources </h2>
+    <div class="data-sources">
+      <p> 
+        Department of Climate Change, Energy, the Environment and Water. (2023, September 29). Australian Energy Update 2023. 
+        Energy.gov.au. <a href="https://www.energy.gov.au/publications/australian-energy-update-2023" target="_blank">
+          https://www.energy.gov.au/publications/australian-energy-update-2023
+        </a>
+      </p>
+      <p>
+        Owens, R. Bradey, K. Hughes, A. Cross, A. Hitchman, A. Feitz, A. Kalinowski, A. Patterson, C. Tenthorey, E. Bernecker, T. Bradshaw, B. Australia's Energy Commodity Resources 
+        - Geoscience Australia. Ga.gov.au. <a href="https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/149666" target="_blank">
+          https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/149666
+        </a>
+      </p>
+      <p>
+        Ritchie, H., Rosado, P., & Roser, M. (2023). CO2 and Greenhouse Gas Emissions. Our World in Data. <a href="https://ourworldindata.org/co2-and-greenhouse-gas-emissions" target="_blank">
+          https://ourworldindata.org/co2-and-greenhouse-gas-emissions
+        </a>
+      </p>
+      <p>
+        Ritchie, H., Roser, M., & Rosado, P. (2022). Energy. Our World in Data. <a href="https://ourworldindata.org/energy" target="_blank">
+          https://ourworldindata.org/energy
+        </a>
+      </p>
+    </div>
+  
+  <script src="charts.js"></script>
+  </body>
+
+</html>
